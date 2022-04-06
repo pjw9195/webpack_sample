@@ -8,5 +8,15 @@ module.exports = {
         //절대경로
         path: path.resolve('./dist'),
         filename: "[name].js"
+    },
+    module: {
+        rules: [
+            {
+                test:/\.js$/,
+                use: [
+                    path.resolve('./my-webpack-loader.js')
+                ]
+            }
+        ]
     }
 }
